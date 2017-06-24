@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+    <script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/pdf.js"></script>
+    <script src="assets/pdf.worker.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+</head>
+<body>
+    <div class="banner">
+        <h1>Online PDF Viewer</h1>
+    </div>
+    <div class="bodyContent container">
+    <div id="main">
+    <p id="description">Use this tool to render PDF files directly in your web browser.</p>
+    </div>
+    <button id="upload-button" class="btn btn-primary">Browse PDF</button> 
+    <input type="file" id="file-to-upload" accept="application/pdf" />
+    <div id="pdf-main-container">
+        <div id="pdf-loader">Loading document ...</div>
+        <div id="pdf-contents">
+            <div id="pdf-meta">
+                <div id="pdf-buttons">
+                    <button id="pdf-prev" class="btn btn-success btn-md">Previous</button>
+                    <button id="pdf-next" class="btn btn-success btn-md">Next</button>
+                </div>
+                <div id="page-count-container">Page <div id="pdf-current-page"></div> of <div id="pdf-total-pages"></div></div>
+            </div>
+            <canvas id="pdf-canvas" width="500"></canvas>
+            <div id="page-loader">Loading page. Please wait..</div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
